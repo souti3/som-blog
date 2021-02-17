@@ -2,7 +2,32 @@
     <body>
         <h1>Welcome to the blog of SoM!</h1>
         <p>blog works!</p>
-        <p>Content will follow soon!</p>
+        <div class="blog-entry" *ngFor="let entry of entries">
+            <div class="blog-image">
+                <img [src]="entry.image"/>
+            </div>
+            <div class="blog-summary">
+                <span class="title">{{entry.title}}</span>
+                <p>{{entry.text}}</p>
+            </div>
+        </div>
+        <div class="form">
+            <div class="control">
+                <label for="title">Titel:</label>
+                <input type="text" id="title" #title/>
+            </div>
+            <div class="control">
+                <label for="image">Bild-URL:</label>
+                <input type="text" id="image" #image/>
+            </div>
+            <div class="control">
+                <label for="text">Text:</label>
+                <textarea id="text" cols="20" rows="3" #text></textarea>
+            </div>
+            <div>
+                <button (click)="createBlogEntry(title.value, image.value, text.value)">Blog-Eintrag anlegen</button>
+            </div>
+        </div>
     </body>
 </html>
 
