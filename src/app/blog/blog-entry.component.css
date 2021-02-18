@@ -1,0 +1,18 @@
+.blog-entry {
+    width: 600px;
+    display: flex;
+    padding-bottom: 30px;
+  }
+  .blog-image {
+    width: 30%;
+  }
+  .blog-summary {
+    width: 70%;
+  }
+  img {
+    max-width: 90%;
+    max-height: 100px;
+  }
+  span.title {
+    font-size: x-large;
+  }

@@ -3,7 +3,8 @@ import {BlogEntry} from './blog-entry';
 
 @Component({
     selector: 'app-blog-entry',
-    templateUrl: 'blog-entry.component.html'
+    templateUrl: 'blog-entry.component.html',
+    styleUrls: ['./blog-entry.component.css']
 })
 export class BlogEntryComponent {
     @Input()
